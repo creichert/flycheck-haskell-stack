@@ -66,7 +66,6 @@ GHC User Manual: https://downloads.haskell.org/~ghc/latest/docs/html/users_guide
             "-x" (eval
                   (pcase major-mode
                     (`haskell-mode "hs")
-                    (`haskell-c "hs")
                     (`literate-haskell-mode "lhs")))
             source)
   :error-patterns
