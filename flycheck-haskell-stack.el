@@ -49,8 +49,10 @@
 See URL `https://github.com/commercialhaskell/stack/'.
 GHC User Manual: https://downloads.haskell.org/~ghc/latest/docs/html/users_guide/
 "
-  :command ("stack" "ghc" "--" "-Wall" "-O0" "-fno-code"
-                              "-XCPP" "-XTemplateHaskell"
+  :command ("stack" "ghc" "--cwd" (eval (shell-command-to-string "echo -n `stack path --project-root`"))
+                          "--"
+                          "-Wall" "-O0" "-fno-code"
+                          "-XCPP" "-XTemplateHaskell"
             (option-flag "-no-user-package-db"
                          flycheck-ghc-no-user-package-database)
             (option-list "-package-db" flycheck-ghc-package-databases)
