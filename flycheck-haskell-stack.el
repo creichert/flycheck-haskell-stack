@@ -79,7 +79,7 @@ GHC User Manual: https://downloads.haskell.org/~ghc/latest/docs/html/users_guide
                            (one-or-more " ")
                            (one-or-more not-newline)))
             line-end)
-   (error line-start (file-name) ":" line ":" column ":"
+   (error line-start (file-name) ":" line ":" column ": error:"
           (or (message (one-or-more not-newline))
               (and "\n"
                    (message
